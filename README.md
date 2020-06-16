@@ -36,7 +36,7 @@ npx graphql-codegen --watch "src/graphql/**/*.graphql"
 ng add apollo-angular
 ```
 
-* [Apollo GraphQL]() VSCode extension is configured for intellisense
+* [Apollo GraphQL](https://marketplace.visualstudio.com/items?itemName=apollographql.vscode-apollo) VSCode extension is configured for intellisense
 
 * [GraphQL code generator](https://graphql-code-generator.com/) is used for codegen
 
