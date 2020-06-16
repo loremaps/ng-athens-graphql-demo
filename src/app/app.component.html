@@ -1,0 +1,20 @@
+<h1>Angular Athens 💜 GraphQL</h1>
+
+<p *ngIf="loading">Loading...</p>
+
+<ng-container>
+    <span *ngFor="let error of errors">{{error.message}}</span>
+</ng-container>
+
+
+<section *ngIf="data?.viewer as user">
+    <img [src]="user.avatarUrl" alt="avatar" />
+    <h2>{{user.name}}</h2>
+    <h3>⭐ {{user.starredRepositories.totalCount}}</h3>
+    <p>joined on {{user.createdAt | date }}</p>
+
+    <p>Your status is: <strong>{{user.status.message}}</strong></p>
+</section>
+
+
+<input #msg type="text" placeholder="Update my status" (keyup.enter)="updateStatus(msg.value)" />

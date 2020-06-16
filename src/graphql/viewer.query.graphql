@@ -1,0 +1,15 @@
+query viewer {
+    viewer {
+        id
+        name
+        avatarUrl
+        createdAt
+        starredRepositories {
+            totalCount
+        }
+        status {
+            id
+            message
+        }
+    }
+}

@@ -1,0 +1,18 @@
+overwrite: true
+schema:
+  - https://api.github.com/graphql:
+      headers:
+        Authorization: Bearer <YOUR-GH-TOKEN>
+documents: "src/**/*.graphql"
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-apollo-angular"
+    config:
+      scalars:
+        DateTime: Date
+        Date: Date
+        URI: URL
+        HTML: string
