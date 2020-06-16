@@ -13,7 +13,7 @@
     <h3>⭐ {{user.starredRepositories.totalCount}}</h3>
     <p>joined on {{user.createdAt | date }}</p>
 
-    <p>Your status is: <strong>{{user.status.message}}</strong></p>
+    <p>Your status is: <strong>{{user.status?.message}}</strong></p>
 </section>
 
 
