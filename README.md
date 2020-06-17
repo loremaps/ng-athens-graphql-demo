@@ -8,6 +8,8 @@ with `public_repo` and `user` scopes enabled
 
 3. Find and replace `<YOUR-GH-TOKEN>` with your token
 
+**IMPORTANT**: Do not share your token. Your token should be treated as a password. Do not store it or hard-coded in a SPA.
+
 4. `npm install`
 
 5. `ng serve`

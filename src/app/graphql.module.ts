@@ -7,7 +7,9 @@ import { ApolloLink } from 'apollo-link';
 
 const uri = 'https://api.github.com/graphql'; // <-- add the URL of the GraphQL server here
 export function createApollo(httpLink: HttpLink) {
-  const token = '<YOUR-GH-TOKEN>'; // <-- add your github personal access token
+  // add your github personal access token
+  // DO NOT COMMIT OR MAKE IT PUBLIC
+  const token = '<YOUR-GH-TOKEN>';
   const auth = setContext((operation, context) => ({
     headers: {
       Authorization: `Bearer ${token}`,
