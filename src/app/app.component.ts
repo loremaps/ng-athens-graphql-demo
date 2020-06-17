@@ -43,7 +43,13 @@ export class AppComponent implements OnInit {
       this.loading = true;
       // No need to unsubscribe here, it will complete itself
       this.changeUserStatusGQL
-        .mutate({ input: { message } })
+        .mutate(
+          { input: { message } },
+          // refetch query is necessary if your status is empty
+          // as it happened during the demo 🤦‍♂️
+          // for me info please check the docs: https://www.apollographql.com/docs/angular/features/cache-updates/
+          { refetchQueries: [{ query: this.viewerGQL.document }] }
+        )
         .subscribe();
     }
   }
